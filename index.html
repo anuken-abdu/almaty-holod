@@ -63,12 +63,16 @@ header.scrolled{background:rgba(238,246,252,.78);backdrop-filter:blur(18px) satu
 .nav-actions{display:flex;align-items:center;gap:14px}
 .nav-phone{display:flex;align-items:center;gap:9px;font-weight:600;font-size:15.5px;color:var(--ink)}
 .nav-phone svg{width:17px;height:17px;stroke:var(--ice-deep);fill:none;stroke-width:2}
-.burger{width:48px;height:48px;border:1px solid var(--line-2);background:rgba(255,255,255,.6);border-radius:14px;cursor:pointer;display:grid;place-items:center;transition:.25s;backdrop-filter:blur(6px)}
+.burger{width:50px;height:50px;border:1px solid var(--line-2);background:rgba(255,255,255,.6);border-radius:15px;cursor:pointer;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:5px;padding:0 13px;transition:.25s;backdrop-filter:blur(6px)}
 .burger:hover{background:#fff;border-color:var(--ice);box-shadow:var(--shadow-s)}
-.burger span{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px;margin:2.7px auto;transition:.3s}
-.burger.active span:nth-child(1){transform:translateY(6.7px) rotate(45deg)}
+.burger span{display:block;height:2.4px;background:var(--ice-deep);border-radius:3px;transition:.32s cubic-bezier(.4,0,.2,1)}
+.burger span:nth-child(1){width:22px}
+.burger span:nth-child(2){width:15px}
+.burger span:nth-child(3){width:22px}
+.burger:hover span:nth-child(2){width:22px}
+.burger.active span:nth-child(1){width:22px;transform:translateY(7.4px) rotate(45deg)}
 .burger.active span:nth-child(2){opacity:0}
-.burger.active span:nth-child(3){transform:translateY(-6.7px) rotate(-45deg)}
+.burger.active span:nth-child(3){width:22px;transform:translateY(-7.4px) rotate(-45deg)}
 
 /* ---------- MENU ---------- */
 .overlay{position:fixed;inset:0;background:rgba(13,42,68,.32);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:.35s;z-index:110}
@@ -124,11 +128,6 @@ header.scrolled{background:rgba(238,246,252,.78);backdrop-filter:blur(18px) satu
 .fc-2{bottom:30px;right:-20px;animation:floaty 4s ease-in-out infinite .8s}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 
-/* brand strip */
-.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.4);padding:22px 0;overflow:hidden;white-space:nowrap;backdrop-filter:blur(6px)}
-.strip-track{display:inline-flex;gap:58px;align-items:center;animation:scroll 26s linear infinite}
-.strip-track span{font-family:var(--display);font-weight:600;font-size:22px;color:var(--dim);letter-spacing:.5px;transition:.2s}
-@keyframes scroll{to{transform:translateX(-50%)}}
 
 /* ADVANTAGES */
 .adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
@@ -147,8 +146,12 @@ header.scrolled{background:rgba(238,246,252,.78);backdrop-filter:blur(18px) satu
 
 /* SERVICES */
 .serv-wrap{margin-top:50px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.serv{display:flex;align-items:center;gap:18px;padding:22px 24px;border-radius:18px;border:1px solid var(--white);background:rgba(255,255,255,.6);transition:.28s;backdrop-filter:blur(8px);box-shadow:var(--shadow-s)}
+.serv{display:flex;align-items:center;gap:18px;padding:22px 24px;border-radius:18px;border:1px solid var(--white);background:rgba(255,255,255,.6);transition:.28s;backdrop-filter:blur(8px);box-shadow:var(--shadow-s);position:relative;cursor:pointer}
 .serv:hover{background:#fff;transform:translateX(6px);box-shadow:var(--shadow-m)}
+.serv .s-txt{flex:1}
+.serv .s-arrow{flex:none;width:34px;height:34px;border-radius:10px;background:var(--grad-soft);display:grid;place-items:center;opacity:0;transform:translateX(-6px);transition:.28s}
+.serv .s-arrow svg{width:17px;height:17px;stroke:var(--ice-deep);fill:none;stroke-width:2.2}
+.serv:hover .s-arrow{opacity:1;transform:translateX(0)}
 .serv .s-ic{flex:none;width:50px;height:50px;border-radius:14px;background:var(--grad-soft);display:grid;place-items:center;transition:.28s}
 .serv .s-ic svg{width:24px;height:24px;stroke:var(--ice-deep);fill:none;stroke-width:1.7}
 .serv:hover .s-ic{background:var(--grad)}
@@ -211,7 +214,7 @@ footer{padding:54px 0 40px;border-top:1px solid var(--line);margin-top:88px}
   .hero-btns .btn{flex:1}
   .hero-stats{gap:22px}
   .fc-1{display:none}
-  .fc-2{right:-8px}
+  .fc-2{display:none}
   .snow{display:none}
   .cta-band{margin:0 14px;border-radius:26px}
   .foot-bottom{flex-direction:column;text-align:center}
@@ -270,27 +273,20 @@ footer{padding:54px 0 40px;border-top:1px solid var(--line);margin-top:88px}
   </div>
 </section>
 
-<div class="strip">
-  <div class="strip-track">
-    <span>Samsung</span><span>LG</span><span>Indesit</span><span>Beko</span><span>Pozis</span><span>Atlant</span><span>Haier</span><span>Hitachi</span><span>Hansa</span>
-    <span>Samsung</span><span>LG</span><span>Indesit</span><span>Beko</span><span>Pozis</span><span>Atlant</span><span>Haier</span><span>Hitachi</span><span>Hansa</span>
-  </div>
-</div>
-
 <section id="services">
   <div class="wrap">
     <div class="rv"><span class="kicker">Что мы делаем</span><h2 class="sec-title">Полный спектр <span class="grad-text">ремонта</span></h2></div>
     <div class="serv-wrap">
-      <div class="serv rv"><div class="s-ic"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 5 6.5 5 9a5 5 0 0 1-10 0c0-2.5 2-5 5-9z"/></svg></div><div><b>Заправка фреона</b><span class="serv-tag">восстановление холода</span></div></div>
-      <div class="serv rv"><div class="s-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.5-2-3.5-2.3 1a7 7 0 0 0-1.7-1l-.3-2.5h-4l-.3 2.5a7 7 0 0 0-1.7 1l-2.3-1-2 3.5 2 1.5a7 7 0 0 0 0 2l-2 1.5 2 3.5 2.3-1a7 7 0 0 0 1.7 1l.3 2.5h4l.3-2.5a7 7 0 0 0 1.7-1l2.3 1 2-3.5-2-1.5a7 7 0 0 0 .1-1z"/></svg></div><div><b>Замена мотора-компрессора</b><span class="serv-tag">сердце холодильника</span></div></div>
-      <div class="serv rv"><div class="s-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5C12 5 9 2 6 4s-1 6 3 6m3-.5C16.5 12 19.5 9 18 6m-2 12c0-4.5 3-7.5 0-9m-8 9c4.5 0 7.5-3 6-6"/></svg></div><div><b>Замена вентилятора</b><span class="serv-tag">циркуляция воздуха</span></div></div>
-      <div class="serv rv"><div class="s-ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/><path d="m9 12 2 2 4-4"/></svg></div><div><b>Устранение утечки</b><span class="serv-tag">герметизация системы</span></div></div>
-      <div class="serv rv"><div class="s-ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9zM2 9h2M2 15h2M20 9h2M20 15h2M9 2v2M15 2v2M9 20v2M15 20v2"/></svg></div><div><b>Ремонт модуля</b><span class="serv-tag">плата управления</span></div></div>
-      <div class="serv rv"><div class="s-ic"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/><circle cx="12" cy="12" r="3"/></svg></div><div><b>Установка контроллера</b><span class="serv-tag">точная настройка</span></div></div>
-      <div class="serv rv"><div class="s-ic"><svg viewBox="0 0 24 24"><path d="M4 13a8 8 0 0 1 16 0M12 5V2M4 13H2M22 13h-2M6 13v4h12v-4"/></svg></div><div><b>Замена реле</b><span class="serv-tag">запуск компрессора</span></div></div>
-      <div class="serv rv"><div class="s-ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg></div><div><b>Ремонт инверторных холодильников</b><span class="serv-tag">современные системы</span></div></div>
-      <div class="serv rv"><div class="s-ic"><svg viewBox="0 0 24 24"><path d="M3 9h18l-1.5 11h-15zM3 9l2-5h14l2 5M8 13v4M12 13v4M16 13v4"/></svg></div><div><b>Витринные морозильники</b><span class="serv-tag">для магазинов</span></div></div>
-      <div class="serv rv"><div class="s-ic"><svg viewBox="0 0 24 24"><path d="M2 21h20M4 21V8l6-4v17M14 21V11l6-3v13M7 9v0M7 13v0M7 17v0"/></svg></div><div><b>Промышленные холодильники</b><span class="serv-tag">любой мощности</span></div></div>
+      <a class="serv rv" href="https://wa.me/77716451117?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0%20%D1%84%D1%80%D0%B5%D0%BE%D0%BD%D0%B0%20%D0%B2%20%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%B5." target="_blank" rel="noopener"><div class="s-ic"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 5 6.5 5 9a5 5 0 0 1-10 0c0-2.5 2-5 5-9z"/></svg></div><div class="s-txt"><b>Заправка фреона</b><span class="serv-tag">восстановление холода</span></div><span class="s-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="serv rv" href="https://wa.me/77716451117?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D0%B0%20%D0%BC%D0%BE%D1%82%D0%BE%D1%80%D0%B0-%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%B5%D1%81%D1%81%D0%BE%D1%80%D0%B0%20%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%B0." target="_blank" rel="noopener"><div class="s-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.5-2-3.5-2.3 1a7 7 0 0 0-1.7-1l-.3-2.5h-4l-.3 2.5a7 7 0 0 0-1.7 1l-2.3-1-2 3.5 2 1.5a7 7 0 0 0 0 2l-2 1.5 2 3.5 2.3-1a7 7 0 0 0 1.7 1l.3 2.5h4l.3-2.5a7 7 0 0 0 1.7-1l2.3 1 2-3.5-2-1.5a7 7 0 0 0 .1-1z"/></svg></div><div class="s-txt"><b>Замена мотора-компрессора</b><span class="serv-tag">сердце холодильника</span></div><span class="s-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="serv rv" href="https://wa.me/77716451117?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D0%B0%20%D0%B2%D0%B5%D0%BD%D1%82%D0%B8%D0%BB%D1%8F%D1%82%D0%BE%D1%80%D0%B0%20%D0%B2%20%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%B5." target="_blank" rel="noopener"><div class="s-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5C12 5 9 2 6 4s-1 6 3 6m3-.5C16.5 12 19.5 9 18 6m-2 12c0-4.5 3-7.5 0-9m-8 9c4.5 0 7.5-3 6-6"/></svg></div><div class="s-txt"><b>Замена вентилятора</b><span class="serv-tag">циркуляция воздуха</span></div><span class="s-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="serv rv" href="https://wa.me/77716451117?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%BD%D0%BE%20%D1%83%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%82%D1%8C%20%D1%83%D1%82%D0%B5%D1%87%D0%BA%D1%83%20%D1%84%D1%80%D0%B5%D0%BE%D0%BD%D0%B0%20%D0%B2%20%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%B5." target="_blank" rel="noopener"><div class="s-ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="s-txt"><b>Устранение утечки</b><span class="serv-tag">герметизация системы</span></div><span class="s-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="serv rv" href="https://wa.me/77716451117?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F%20%28%D0%BF%D0%BB%D0%B0%D1%82%D1%8B%20%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%29%20%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%B0." target="_blank" rel="noopener"><div class="s-ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9zM2 9h2M2 15h2M20 9h2M20 15h2M9 2v2M15 2v2M9 20v2M15 20v2"/></svg></div><div class="s-txt"><b>Ремонт модуля</b><span class="serv-tag">плата управления</span></div><span class="s-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="serv rv" href="https://wa.me/77716451117?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%BD%D0%B0%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D0%BB%D0%B5%D1%80%D0%B0%20%D0%BD%D0%B0%20%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA." target="_blank" rel="noopener"><div class="s-ic"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/><circle cx="12" cy="12" r="3"/></svg></div><div class="s-txt"><b>Установка контроллера</b><span class="serv-tag">точная настройка</span></div><span class="s-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="serv rv" href="https://wa.me/77716451117?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D0%B0%20%D1%80%D0%B5%D0%BB%D0%B5%20%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%B0." target="_blank" rel="noopener"><div class="s-ic"><svg viewBox="0 0 24 24"><path d="M4 13a8 8 0 0 1 16 0M12 5V2M4 13H2M22 13h-2M6 13v4h12v-4"/></svg></div><div class="s-txt"><b>Замена реле</b><span class="serv-tag">запуск компрессора</span></div><span class="s-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="serv rv" href="https://wa.me/77716451117?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%B8%D0%BD%D0%B2%D0%B5%D1%80%D1%82%D0%BE%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%B0." target="_blank" rel="noopener"><div class="s-ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg></div><div class="s-txt"><b>Ремонт инверторных холодильников</b><span class="serv-tag">современные системы</span></div><span class="s-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="serv rv" href="https://wa.me/77716451117?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%B2%D0%B8%D1%82%D1%80%D0%B8%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%BC%D0%BE%D1%80%D0%BE%D0%B7%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%B0." target="_blank" rel="noopener"><div class="s-ic"><svg viewBox="0 0 24 24"><path d="M3 9h18l-1.5 11h-15zM3 9l2-5h14l2 5M8 13v4M12 13v4M16 13v4"/></svg></div><div class="s-txt"><b>Витринные морозильники</b><span class="serv-tag">для магазинов</span></div><span class="s-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="serv rv" href="https://wa.me/77716451117?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BF%D1%80%D0%BE%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%B0%20/%20%D0%BC%D0%BE%D1%80%D0%BE%D0%B7%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%B0." target="_blank" rel="noopener"><div class="s-ic"><svg viewBox="0 0 24 24"><path d="M2 21h20M4 21V8l6-4v17M14 21V11l6-3v13M7 9v0M7 13v0M7 17v0"/></svg></div><div class="s-txt"><b>Промышленные холодильники</b><span class="serv-tag">любой мощности</span></div><span class="s-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     </div>
   </div>
 </section>
