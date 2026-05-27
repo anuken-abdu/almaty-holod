@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ремонт Холодильников и Морозильников — Алматы | 24/7 выезд на дом</title>
+<meta name="description" content="Ремонт холодильников и морозильников в Алматы на дому. Заправка фреона, замена мотора. Опыт 10+ лет. Выезд 30 минут. Работаем 24/7. Тел: +7 771 645 1117" />
+<meta name="keywords" content="ремонт холодильников Алматы, заправка фреона, замена мотора на дому, ремонт морозильников Алматы" />
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;color:#0f172a;background:#fff;line-height:1.5;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:0;background:none}
+  ul{list-style:none}
+  .container{max-width:1152px;margin:0 auto;padding:0 16px}
+
+  /* Header */
+  .header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;max-width:1152px;margin:0 auto}
+  .logo{display:flex;align-items:center;gap:8px;min-width:0;flex:1}
+  .logo-mark{width:36px;height:36px;border-radius:8px;background:#2563eb;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff}
+  .logo-text{min-width:0}
+  .logo-title{font-size:14px;font-weight:700;color:#0f172a;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .logo-sub{font-size:11px;color:#64748b;line-height:1.2}
+  @media(min-width:768px){.logo-title{font-size:16px}}
+
+  .header-actions{display:flex;align-items:center;gap:8px}
+  .btn-call-header{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#2563eb;color:#fff;padding:10px 16px;border-radius:8px;font-weight:600;font-size:14px;transition:background .2s}
+  .btn-call-header:hover{background:#1d4ed8}
+  .btn-call-header-mobile{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;background:#2563eb;color:#fff;border-radius:8px}
+  .btn-call-header-mobile:hover{background:#1d4ed8}
+  .btn-burger{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;border:1px solid #e2e8f0;background:#fff;color:#0f172a}
+  .btn-burger:hover{background:#f8fafc}
+  .header-phone-text{display:none}
+  @media(min-width:640px){.btn-call-header-mobile{display:none}.header-phone-text{display:inline}}
+  @media(max-width:767px){.header-phone-text{display:none}}
+  .header-phone-short{display:inline}
+  @media(min-width:768px){.header-phone-short{display:none}}
+
+  /* Burger menu */
+  .nav{display:none;border-top:1px solid #e2e8f0;background:#fff}
+  .nav.open{display:block}
+  .nav ul{max-width:1152px;margin:0 auto;padding:8px 16px;display:flex;flex-direction:column}
+  .nav a{display:block;padding:12px 8px;color:#334155;font-weight:500;border-radius:6px;transition:all .15s}
+  .nav a:hover{color:#2563eb;background:#f8fafc}
+
+  /* Hero */
+  .hero{position:relative;padding:96px 0 64px;overflow:hidden;color:#fff}
+  @media(min-width:768px){.hero{padding:128px 0 96px}}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(30,58,138,.85),rgba(30,64,175,.7),rgba(30,58,138,.5))}
+  .hero-content{position:relative;z-index:1;max-width:640px}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,.2);backdrop-filter:blur(8px);border:1px solid rgba(147,197,253,.3);padding:6px 12px;border-radius:9999px;font-size:14px;font-weight:500;margin-bottom:16px}
+  .hero h1{font-size:30px;font-weight:700;line-height:1.15;margin-bottom:16px}
+  @media(min-width:640px){.hero h1{font-size:36px}}
+  @media(min-width:768px){.hero h1{font-size:48px}}
+  .hero-sub{font-size:18px;color:#dbeafe;margin-bottom:8px}
+  @media(min-width:768px){.hero-sub{font-size:20px}}
+  .hero-desc{font-size:16px;color:#bfdbfe;margin-bottom:32px}
+  .hero-cta{display:flex;flex-direction:column;gap:12px}
+  @media(min-width:640px){.hero-cta{flex-direction:row}}
+
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 24px;border-radius:12px;font-size:18px;font-weight:700;background:#2563eb;color:#fff;box-shadow:0 10px 25px rgba(30,58,138,.3);transition:background .2s}
+  .btn-primary:hover{background:#1d4ed8}
+  .btn-whatsapp{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 24px;border-radius:12px;font-size:18px;font-weight:700;background:#22c55e;color:#fff;box-shadow:0 10px 25px rgba(20,83,45,.3);transition:background .2s}
+  .btn-whatsapp:hover{background:#16a34a}
+  .btn-white{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 24px;border-radius:12px;font-size:18px;font-weight:700;background:#fff;color:#1d4ed8;box-shadow:0 10px 25px rgba(0,0,0,.15);transition:background .2s}
+  .btn-white:hover{background:#f1f5f9}
+
+  /* Sections */
+  section{padding:64px 0}
+  @media(min-width:768px){section{padding:80px 0}}
+  .section-light{background:#f8fafc}
+  .section-white{background:#fff}
+  .section-head{text-align:center;margin-bottom:40px}
+  .section-head h2{font-size:30px;font-weight:700;color:#0f172a;margin-bottom:12px}
+  @media(min-width:768px){.section-head h2{font-size:36px}}
+  .section-head p{color:#475569;max-width:640px;margin:0 auto}
+
+  /* Advantages */
+  .grid-adv{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:640px){.grid-adv{grid-template-columns:repeat(2,1fr);gap:24px}}
+  @media(min-width:1024px){.grid-adv{grid-template-columns:repeat(3,1fr)}}
+  .adv-card{background:#fff;border-radius:16px;padding:24px;border:1px solid #e2e8f0;transition:all .2s}
+  .adv-card:hover{border-color:#60a5fa;box-shadow:0 10px 15px rgba(0,0,0,.08)}
+  .adv-icon{width:48px;height:48px;border-radius:12px;background:#dbeafe;color:#2563eb;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .adv-card h3{font-size:18px;font-weight:700;color:#0f172a;margin-bottom:4px}
+  .adv-card p{font-size:14px;color:#475569}
+
+  /* Services */
+  .grid-services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:40px}
+  @media(min-width:640px){.grid-services{grid-template-columns:repeat(3,1fr);gap:16px}}
+  @media(min-width:1024px){.grid-services{grid-template-columns:repeat(5,1fr)}}
+  .service-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:16px;display:flex;flex-direction:column;align-items:center;text-align:center;transition:all .2s}
+  @media(min-width:768px){.service-card{padding:20px}}
+  .service-card:hover{background:#2563eb;border-color:#2563eb;color:#fff}
+  .service-icon{width:48px;height:48px;border-radius:8px;background:#dbeafe;color:#2563eb;display:flex;align-items:center;justify-content:center;margin-bottom:12px;transition:all .2s}
+  .service-card:hover .service-icon{background:rgba(255,255,255,.2);color:#fff}
+  .service-title{font-size:14px;font-weight:600;color:#1e293b;line-height:1.3}
+  .service-card:hover .service-title{color:#fff}
+
+  .grid-photos{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:768px){.grid-photos{grid-template-columns:repeat(2,1fr);gap:24px}}
+  .photo-card{border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;background:#fff}
+  .photo-card img{width:100%;height:224px;object-fit:cover}
+  @media(min-width:768px){.photo-card img{height:256px}}
+  .photo-card-body{padding:20px}
+  .photo-card-body h4{font-weight:700;color:#0f172a;margin-bottom:4px}
+  .photo-card-body p{font-size:14px;color:#475569}
+
+  /* Brands */
+  .brands-wrap{display:grid;grid-template-columns:1fr;gap:24px;align-items:center}
+  @media(min-width:1024px){.brands-wrap{grid-template-columns:repeat(2,1fr)}}
+  .brands-image{border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;order:2}
+  @media(min-width:1024px){.brands-image{order:1}}
+  .brands-image img{width:100%;height:256px;object-fit:cover}
+  @media(min-width:768px){.brands-image img{height:320px}}
+  .brands-list-wrap{order:1}
+  @media(min-width:1024px){.brands-list-wrap{order:2}}
+  .brands-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  @media(min-width:640px){.brands-grid{grid-template-columns:repeat(4,1fr)}}
+  .brand-item{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px 8px;text-align:center;font-weight:700;color:#334155;transition:all .2s}
+  .brand-item:hover{border-color:#60a5fa;color:#2563eb;box-shadow:0 4px 6px rgba(0,0,0,.08)}
+  .brands-note{text-align:center;color:#94a3b8;margin-top:16px;font-size:14px}
+
+  /* CTA */
+  .cta{background:linear-gradient(135deg,#1d4ed8,#1e3a8a);color:#fff;text-align:center}
+  .cta h2{font-size:30px;font-weight:700;margin-bottom:16px}
+  @media(min-width:768px){.cta h2{font-size:36px}}
+  .cta-desc{font-size:18px;color:#dbeafe;margin-bottom:32px;max-width:640px;margin-left:auto;margin-right:auto}
+  .cta-buttons{display:flex;flex-direction:column;gap:12px;justify-content:center;margin-bottom:40px}
+  @media(min-width:640px){.cta-buttons{flex-direction:row}}
+  .cta-info{display:grid;grid-template-columns:1fr;gap:16px;max-width:768px;margin:0 auto}
+  @media(min-width:640px){.cta-info{grid-template-columns:repeat(3,1fr)}}
+  .cta-info-card{background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:20px;text-align:center}
+  .cta-info-card svg{margin:0 auto 8px;color:#bfdbfe}
+  .cta-info-label{font-size:14px;color:#bfdbfe;margin-bottom:4px}
+  .cta-info-value{font-weight:700;color:#fff}
+  .cta-info-value a:hover{color:#dbeafe}
+
+  /* Footer */
+  .footer{background:#0f172a;color:#94a3b8;padding:32px 0;text-align:center}
+  .footer p{font-size:14px;line-height:1.6}
+  .footer-services{margin-bottom:12px}
+  .footer-anuken{color:#60a5fa;font-weight:600;text-decoration:underline}
+  .footer-anuken:hover{color:#93c5fd}
+
+  /* Floating WhatsApp */
+  .float-wa{position:fixed;bottom:20px;right:20px;z-index:40;width:56px;height:56px;background:#22c55e;color:#fff;border-radius:9999px;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 20px 25px rgba(0,0,0,.2);transition:background .2s}
+  .float-wa:hover{background:#16a34a}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#hero" class="logo" data-scroll>
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M12 2v20"/><path d="m4.93 4.93 14.14 14.14"/><path d="m19.07 4.93-14.14 14.14"/></svg>
+      </span>
+      <span class="logo-text">
+        <span class="logo-title">Ремонт Холодильников</span>
+        <span class="logo-sub">и Морозильников — Алматы</span>
+      </span>
+    </a>
+    <div class="header-actions">
+      <a href="tel:+77716451117" class="btn-call-header">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="header-phone-text">+7 771 645 1117</span>
+        <span class="header-phone-short">Звонок</span>
+      </a>
+      <a href="tel:+77716451117" class="btn-call-header-mobile" aria-label="Позвонить">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <button class="btn-burger" id="burgerBtn" aria-label="Меню">
+        <svg id="iconMenu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+        <svg id="iconClose" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="#hero" data-scroll>Главная</a></li>
+      <li><a href="#advantages" data-scroll>Преимущества</a></li>
+      <li><a href="#services" data-scroll>Услуги</a></li>
+      <li><a href="#brands" data-scroll>Бренды</a></li>
+      <li><a href="#contacts" data-scroll>Контакты</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section id="hero" class="hero">
+  <div class="hero-bg">
+    <img src="https://mgx-backend-cdn.metadl.com/generate/images/1051846/2026-05-27/plbq4zyaag3a/hero-technician-fridge.png" alt="Мастер по ремонту холодильников в Алматы" />
+  </div>
+  <div class="container hero-content">
+    <div class="hero-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Работаем 24/7 — выезд за 30 минут
+    </div>
+    <h1>Ремонт холодильников и морозильников в Алматы</h1>
+    <p class="hero-sub">Заправка фреона, замена мотора — на дому</p>
+    <p class="hero-desc">Опыт более 10 лет • Бесплатная диагностика при ремонте • Все запчасти с собой</p>
+    <div class="hero-cta">
+      <a href="tel:+77716451117" class="btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Вызвать мастера
+      </a>
+      <a href="https://wa.me/77716451117" target="_blank" rel="noopener" class="btn-whatsapp">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        Написать в WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Advantages -->
+<section id="advantages" class="section-light">
+  <div class="container">
+    <div class="section-head">
+      <h2>Наши преимущества</h2>
+      <p>Ремонт холодильников Алматы — быстро, качественно, с гарантией результата</p>
+    </div>
+    <div class="grid-adv">
+      <div class="adv-card">
+        <div class="adv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
+        <h3>Опыт более 10 лет</h3>
+        <p>Профессиональный мастер с многолетней практикой</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Выезд за 30 минут</h3>
+        <p>Быстрая реакция на заявку по всей Алматы</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Бесплатная диагностика</h3>
+        <p>При согласии на ремонт диагностика — бесплатно</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4 7.55 4.24"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+        <h3>Запчасти с собой</h3>
+        <p>Все необходимые детали уже в наличии у мастера</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
+        <h3>Скидка 30%</h3>
+        <p>Пенсионерам и многодетным семьям</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <h3>Работа 24/7</h3>
+        <p>Без выходных и праздников</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="section-white">
+  <div class="container">
+    <div class="section-head">
+      <h2>Услуги</h2>
+      <p>Полный спектр работ по ремонту холодильного оборудования на дому в Алматы</p>
+    </div>
+    <div class="grid-services">
+      <div class="service-card"><div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/></svg></div><div class="service-title">Заправка фреона</div></div>
+      <div class="service-card"><div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><div class="service-title">Замена мотора</div></div>
+      <div class="service-card"><div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg></div><div class="service-title">Замена вентилятора</div></div>
+      <div class="service-card"><div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div><div class="service-title">Устранение утечки</div></div>
+      <div class="service-card"><div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div><div class="service-title">Ремонт модуля</div></div>
+      <div class="service-card"><div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><div class="service-title">Установка контроллера</div></div>
+      <div class="service-card"><div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="service-title">Замена реле</div></div>
+      <div class="service-card"><div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div><div class="service-title">Ремонт инверторных холодильников</div></div>
+      <div class="service-card"><div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><line x1="2" y1="7" x2="22" y2="7"/><path d="M22 7v3a2 2 0 0 1-2 2 2.7 2.7 0 0 1-2.5-2 2.7 2.7 0 0 1-5 0 2.7 2.7 0 0 1-5 0 2.7 2.7 0 0 1-5 0A2 2 0 0 1 2 10V7"/></svg></div><div class="service-title">Витринные морозильники</div></div>
+      <div class="service-card"><div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg></div><div class="service-title">Промышленные холодильники</div></div>
+    </div>
+    <div class="grid-photos">
+      <div class="photo-card">
+        <img src="https://mgx-backend-cdn.metadl.com/generate/images/1051846/2026-05-27/plbrbviaag6q/service-fridge-repair.png" alt="Заправка фреона и ремонт холодильника" />
+        <div class="photo-card-body">
+          <h4>Бытовые холодильники</h4>
+          <p>Ремонт на дому всех типов: однокамерные, двухкамерные, инверторные, side-by-side</p>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="https://mgx-backend-cdn.metadl.com/generate/images/1051846/2026-05-27/plbqz6qaag4q/service-commercial-freezer.png" alt="Витринные и промышленные морозильники" />
+        <div class="photo-card-body">
+          <h4>Витринные и промышленные</h4>
+          <p>Ремонт холодильного оборудования для магазинов, кафе, складов и производств</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Brands -->
+<section id="brands" class="section-light">
+  <div class="container">
+    <div class="section-head">
+      <h2>Бренды, с которыми работаем</h2>
+      <p>Ремонтируем холодильники и морозильники любых производителей и моделей</p>
+    </div>
+    <div class="brands-wrap">
+      <div class="brands-image">
+        <img src="https://mgx-backend-cdn.metadl.com/generate/images/1051846/2026-05-27/plbq52iaag4a/brands-fridges-lineup.png" alt="Холодильники различных брендов" />
+      </div>
+      <div class="brands-list-wrap">
+        <div class="brands-grid">
+          <div class="brand-item">Samsung</div>
+          <div class="brand-item">Indesit</div>
+          <div class="brand-item">Beko</div>
+          <div class="brand-item">Pozis</div>
+          <div class="brand-item">LG</div>
+          <div class="brand-item">Atlant</div>
+          <div class="brand-item">Haier</div>
+          <div class="brand-item">Hitachi</div>
+          <div class="brand-item">Hansa</div>
+          <div class="brand-item">Bosch</div>
+          <div class="brand-item">Whirlpool</div>
+          <div class="brand-item">Daewoo</div>
+        </div>
+        <p class="brands-note">и другие модели</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / Contacts -->
+<section id="contacts" class="cta">
+  <div class="container">
+    <h2>Нужен ремонт холодильника?</h2>
+    <p class="cta-desc">Звоните прямо сейчас — мастер выедет к вам в течение 30 минут. Работаем по всей Алматы 24/7.</p>
+    <div class="cta-buttons">
+      <a href="tel:+77716451117" class="btn-white">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +7 771 645 1117
+      </a>
+      <a href="https://wa.me/77716451117" target="_blank" rel="noopener" class="btn-whatsapp">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        Написать в WhatsApp
+      </a>
+    </div>
+    <div class="cta-info">
+      <div class="cta-info-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div class="cta-info-label">Телефон</div>
+        <div class="cta-info-value"><a href="tel:+77716451117">+7 771 645 1117</a></div>
+      </div>
+      <div class="cta-info-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="cta-info-label">Город</div>
+        <div class="cta-info-value">Алматы, выезд на дом</div>
+      </div>
+      <div class="cta-info-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div class="cta-info-label">График</div>
+        <div class="cta-info-value">24/7, без выходных</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p class="footer-services">
+      Ремонт холодильников Алматы • Заправка фреона • Замена мотора на дому • Ремонт морозильников • Витринные и промышленные холодильники • Работаем 24/7
+    </p>
+    <p>
+      Разработка и продвижение
+      <a href="https://wa.me/77074534518" target="_blank" rel="noopener" class="footer-anuken">Anuken</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/77716451117" target="_blank" rel="noopener" class="float-wa" aria-label="Написать в WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</a>
+
+<script>
+  // Burger menu toggle
+  var burger=document.getElementById('burgerBtn');
+  var nav=document.getElementById('nav');
+  var iconMenu=document.getElementById('iconMenu');
+  var iconClose=document.getElementById('iconClose');
+  burger.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    iconMenu.style.display=open?'none':'block';
+    iconClose.style.display=open?'block':'none';
+  });
+  // Smooth scroll & close menu after click
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener('click',function(e){
+      var href=this.getAttribute('href');
+      if(!href||href==='#')return;
+      var target=document.querySelector(href);
+      if(target){
+        e.preventDefault();
+        target.scrollIntoView({behavior:'smooth'});
+        if(nav.classList.contains('open')){
+          nav.classList.remove('open');
+          iconMenu.style.display='block';
+          iconClose.style.display='none';
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>
